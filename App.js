@@ -4,7 +4,7 @@
 const root=ReactDOM.createRoot(document.getElementById("root"));
 
 //Render heading in root(Helps to Put the object heading into the page by making it an html element)
-root.render(heading);
+//root.render(heading);
 
 
 //Nested
@@ -16,7 +16,51 @@ const parent=React.createElement("div",{id:"parent"},React.createElement("div",{
 
 
 //Render will replace the existing element that is present in the root
-root.render(parent);
+//root.render(parent);
 
 
 //React is just a library.Not a framework.
+
+
+//Episode 3
+
+
+//React Element
+const heading=(<h1>Heading</h1>)
+
+
+//Functional Component
+const Title=()=>{
+    return(
+        <div>
+        {heading}
+
+         <h1 className="head" tabIndex='5'>
+             Namaste Using Jsx 
+         </h1>
+    
+        
+        
+        </div>
+        
+  
+    
+)
+}
+
+
+//Functional Component
+const HeadingComponent=()=>{
+    return(
+    <div id="container">
+
+        {/* We can call Title in three ways.All are same */}
+        {Title()}
+        <Title></Title>
+         <Title/>
+        <h1 className="heading">Namaste React Functional Component</h1>
+
+    </div>)
+}
+
+root.render(<HeadingComponent/>)
